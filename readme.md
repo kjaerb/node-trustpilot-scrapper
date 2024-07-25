@@ -52,7 +52,10 @@ This pushes your changes to git. (Uploads them to github)
 ```cmd
 git checkout <branch to checkout to>
 ```
-In git, it's possible to create a branch if you want to work with different people. Then you can simply checkout (switch) to a new branch where you can create your work there, without interfeering with others work. If it's the first time you're checking out to a branch, pass the "-b" flag to signal it's a new branch.
+In git, it's possible to create a branch if you want to work with different people. Then you can simply checkout (switch) to a new branch where you can create your work there, without interfeering with others work. If it's the first time you're checking out to a branch, pass the "-b" flag to signal it's a new branch. If it's the first time pushing to a new branch git will most likely prompt you to:
+```cmd
+git push --set-upstream origin <branch name>
+```
 
 ### Git notes
 I've added a `.gitignore` file. This file tells git all of the files/folders it should NOT include. Usually, this includes the node_modules folder, as it can be quite large. Also enviornment variables.
