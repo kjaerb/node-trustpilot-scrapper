@@ -23,7 +23,13 @@ npm run main
 This runs the script in the terminal. The script it defined in the `package.json` file under the scripts object.
 
 ## Further development
-I've setup the project to fetch from Trustpilot. Now you should learn some typescript, parse the data and return all of the reviews in a structured object.
+I've setup the project to fetch from Trustpilot. Now you should learn some typescript, parse the data and return all of the reviews in a structured object. We found that trustpilot returns all of the data in jsonld (JSON Linked Data). Get familiar with javascript objects (Not class objects), see the structure of the object returned and see how we can get all of the reviews from there.
+<img src="/assets/lomax_trustpilot.png" alt="trustpilot_lomax networks tab" />
+
+Parsing this jsonld script tag from text to json then returns this object:
+<img src="/assets/trustpilot_data.png" alt="jsonld object structure" />
+
+There's a lot of metadata we might not want to use. The most important files are the once that have the "Review" type.
 
 ## Git
 This project also allows you to try some version control with Git. If you don't already have Git installed, you can install it from <a href="https://git-scm.com/downloads" target="_blank">here</a>. Git (And github or other sites) allows you to upload and version your code, such that you can go back in time or branch out and work with multiple people. I've already setup a git project in this directory by running `git init`. This simply creates an empty git repo in a ".git" folder. This folder is hidden by default, but you can see it by running `dir -h` in the cmd (On unix `ls -a`). This folder simply holds some metadata about the git settings.
@@ -32,6 +38,11 @@ If it's the first time using git, you should probably add your username and emai
 ```cmd
 git config --global user.name <insert git username>
 git config --global user.email <insert git email>
+```
+
+Start by cloning the repository by running this command in the terminal:
+```cmd
+git clone https://github.com/kjaerb/node-trustpilot-scrapper.git
 ```
 
 There are a couple of commands to worry about:
