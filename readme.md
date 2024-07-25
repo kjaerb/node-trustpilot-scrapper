@@ -28,6 +28,12 @@ I've setup the project to fetch from Trustpilot. Now you should learn some types
 ## Git
 This project also allows you to try some version control with Git. If you don't already have Git installed, you can install it from <a href="https://git-scm.com/downloads" target="_blank">here</a>. Git (And github or other sites) allows you to upload and version your code, such that you can go back in time or branch out and work with multiple people. I've already setup a git project in this directory by running `git init`. This simply creates an empty git repo in a ".git" folder. This folder is hidden by default, but you can see it by running `dir -h` in the cmd (On unix `ls -a`). This folder simply holds some metadata about the git settings.
 
+If it's the first time using git, you should probably add your username and email to the global git config by running
+```cmd
+git config --global user.name <insert git username>
+git config --global user.email <insert git email>
+```
+
 There are a couple of commands to worry about:
 ```cmd
 git status
