@@ -31,6 +31,8 @@ Parsing this jsonld script tag from text to json then returns this object:
 
 There's a lot of metadata we might not want to use. The most important files are the once that have the "Review" type.
 
+To get started, you should branch out to the `dev` branch, and work from there. Here you can add and push all of the changes that you want. When we want to merge them into main, we'll create a pull request. To see how to branch out, checkout the git section.
+
 ## Git
 This project also allows you to try some version control with Git. If you don't already have Git installed, you can install it from <a href="https://git-scm.com/downloads" target="_blank">here</a>. Git (And github or other sites) allows you to upload and version your code, such that you can go back in time or branch out and work with multiple people. I've already setup a git project in this directory by running `git init`. This simply creates an empty git repo in a ".git" folder. This folder is hidden by default, but you can see it by running `dir -h` in the cmd (On unix `ls -a`). This folder simply holds some metadata about the git settings.
 
@@ -73,6 +75,18 @@ In git, it's possible to create a branch if you want to work with different peop
 ```cmd
 git push --set-upstream origin <branch name>
 ```
+
+If there are changes you do not want to add anyways, before you've commited, you can run the stash command:
+```cmd
+git stash
+```
+This simply removes the changes you've made, and brings you back to your last commit.
+
+A usual workflow would then look like this. My terminal looks a bit different as i use <a href="https://github.com/romkatv/powerlevel10k" target="_blank">powerlevel10k</a>. This just tells me updates and tells me what branch im on (master). You can see what branch you are on, by running the status command. 
+Green = No git updates
+Yellow + number = 2 git changes
+Light blue = Commit ready to be pushed
+<img src="/assets/git_workflow.png" alt="git workflow" />
 
 ### Git notes
 I've added a `.gitignore` file. This file tells git all of the files/folders it should NOT include. Usually, this includes the node_modules folder, as it can be quite large. Also enviornment variables.
